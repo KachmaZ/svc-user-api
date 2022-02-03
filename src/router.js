@@ -1,5 +1,6 @@
 import Vue from "vue"
 import Router from "vue-router"
+import UserPage from '@/views/UserPage'
 
 Vue.use(Router)
 
@@ -11,8 +12,9 @@ export default new Router({
             component: () => import("./views/Home.vue")
         },
         {
-            path: "/user",
-            component: () => import("./views/UserPage.vue")
+            path: "/user/:userId",
+            component: UserPage,
+            props: true,
         }
     ]
 })

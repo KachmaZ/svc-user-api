@@ -1,12 +1,26 @@
 <template>
   <div>
+    <h1>Current User:{{currentUser}}</h1>
     <router-link to="/">To all users</router-link>
-    <h1>Some user's page</h1>
+    <!-- <SingleUserPage :userId="userId" /> -->
   </div>
 </template>
 
 <script>
-export default {};
+// import SingleUserPage from '@/components/SingleUserPage'
+import {mapGetters} from 'vuex'
+
+export default {
+    props: {
+        userId: String,
+    },
+
+    computed: mapGetters(['currentUser']),
+
+    components: {
+        // SingleUserPage,
+    }
+};
 </script>
 
 <style>

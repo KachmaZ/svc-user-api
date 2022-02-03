@@ -1,16 +1,18 @@
 <template>
   <div>
       <ul>
-          <li>Some user 1</li>
-          <li>Some user 2</li>
-          <li>Some user 3</li>
+          <UsersGrid />
       </ul>
   </div>
 </template>
 
 <script>
-export default {
+import UsersGrid from "@/components/UsersGrid.vue";
 
+export default {
+    components: {
+        UsersGrid
+    }
 }
 </script>
 
