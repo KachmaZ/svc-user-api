@@ -3,7 +3,7 @@ import Router from "vue-router"
 
 Vue.use(Router)
 
-export default Router({
+export default new Router({
     mode: "history",
     routes: [
         {
@@ -11,7 +11,8 @@ export default Router({
             component: () => import("./views/Home.vue")
         },
         {
-            path: "user"
+            path: "/user",
+            component: () => import("./views/UserPage.vue")
         }
     ]
 })
