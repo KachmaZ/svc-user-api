@@ -1,8 +1,6 @@
 <template>
   <div>
-      <ul>
-          <UsersGrid />
-      </ul>
+        <UsersGrid />
   </div>
 </template>
 
