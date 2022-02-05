@@ -1,5 +1,6 @@
 <template>
-  <div class="container my-4">
+  <Loader v-if="isFetching" />
+  <div v-else class="userPage container my-4 px-4">
     <div class="row">
       <UserInfo :user="currentUser" />
       <CompanyInfo :company="currentUser.company" />
@@ -13,6 +14,7 @@
 <script>
 import UserInfo from "@/components/UserInfo";
 import CompanyInfo from "@/components/CompanyInfo";
+import Loader from "@/components/Loader";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
@@ -20,27 +22,24 @@ export default {
     userId: String,
   },
 
-  computed: mapGetters(["currentUser"]),
+  computed: mapGetters(["currentUser", "isFetching"]),
 
   methods: mapActions(["fetchById"]),
 
   components: {
     UserInfo,
     CompanyInfo,
+    Loader,
   },
 
   async mounted() {
     this.fetchById(this.userId);
   },
-
-  unmounted() {
-    console.log("!!!");
-  },
 };
 </script>
   
 <style scope>
-.container {
+.userPage {
   border: 1px solid grey;
   border-radius: 10px;
 }
