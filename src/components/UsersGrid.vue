@@ -1,3 +1,5 @@
+// Full grid of user cards
+
 <template>
   <div class="container my-4">
     <div class="card-deck row gy-4 align-items-center">
@@ -23,6 +25,3 @@ export default {
   },
 };
 </script>
-
-<style scope>
-</style>

@@ -1,3 +1,6 @@
+// Main component of single user's page. Contains 
+// personal and corporative information about user
+
 <template>
   <Loader v-if="isFetching" />
   <div v-else class="userPage container my-4 px-4">

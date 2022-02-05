@@ -1,3 +1,5 @@
+// Single user's page view
+
 <template>
   <div>
     <UserPage :userId="$route.params.userId"/>
@@ -13,6 +15,3 @@ export default {
     }
 };
 </script>
-
-<style>
-</style>

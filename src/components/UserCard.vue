@@ -1,3 +1,5 @@
+// Single user card with short inaformation
+
 <template>
   <div class="col-lg-4 col-md-6 col-xs-10">
     <div class="card">

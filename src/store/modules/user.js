@@ -1,3 +1,4 @@
+// User info state
 export default {
     actions: {
         // Fetch all users from API
@@ -35,9 +36,9 @@ export default {
     },
 
     state: {
-        users: [],
-        current: {},
-        fetchStatus: null,
+        users: [], //contains full users list
+        current: {}, //contains current chosen user for UserPage component
+        fetchStatus: null, //represents current user fetching status to lead Loader component 
     },
 
     getters: {

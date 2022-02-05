@@ -1,3 +1,5 @@
+// Main page view with users grid
+
 <template>
   <div>
         <UsersGrid />
@@ -13,7 +15,3 @@ export default {
     }
 }
 </script>
-
-<style>
-
-</style>

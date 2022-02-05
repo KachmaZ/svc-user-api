@@ -1,3 +1,5 @@
+// Part of single user's page with corporative information
+
 <template>
   <div class="col-md-6 d-flex flex-column justify-content-around">
     <h1 class="company-head">Company</h1>
@@ -11,8 +13,8 @@
 export default {
   props:{
     company: Object,
-  }
-}
+  },
+};
 </script>
 
 <style scope>

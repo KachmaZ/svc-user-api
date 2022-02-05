@@ -1,3 +1,5 @@
+// Pure css loader
+
 <template>
   <div class="d-flex justify-content-center">
     <div class="lds-grid">

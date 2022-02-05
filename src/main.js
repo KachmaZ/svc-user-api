@@ -1,7 +1,7 @@
 import Vue from 'vue'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import { BootstrapVue} from 'bootstrap-vue'
 
-// Импортировать файлы CSS Bootstrap и Bootstrap Vue (порядок важен)
+// Bootstrap files import (order is important!)
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
@@ -9,10 +9,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 
-// Сделайте BootstrapVue доступным для всего проекта
+// Bootstrap Vue plugin register
 Vue.use(BootstrapVue)
-// При желании установите плагин компонентов иконок BootstrapVue
-Vue.use(IconsPlugin)
 
 Vue.config.productionTip = false
 

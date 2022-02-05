@@ -1,3 +1,5 @@
+// Part of single user's page with personal information
+
 <template>
   <div class="col-md-6">
     <img class="col-md-3" src="@/assets/user-icon.png" alt="User Avatar" />
@@ -18,6 +20,3 @@ export default {
   },
 };
 </script>
-
-<style scope>
-</style>
