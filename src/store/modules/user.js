@@ -1,16 +1,17 @@
 export default {
     actions: {
-        async fetchUsers(ctx) {
+        async fetchAll(ctx) {
             const res = await fetch("https://jsonplaceholder.typicode.com/users/");
             const users = await res.json();
 
             ctx.commit('updateUsers', users)
         },
-        async fetchById(ctx, userId) {
-            const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
-            const user = await res.json();
 
-            ctx.commit('updateCurrentUser', user)
+        async fetchById(ctx, id) {
+            const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+            const users = await res.json();
+
+            ctx.commit('updateCurrent', users)
         }
     },
 
@@ -19,22 +20,22 @@ export default {
             state.users = users;
         },
 
-        updateCurrentUser(state, newCurrent){
-            state.currentUser = newCurrent;
+        updateCurrent(state, current) {
+            state.current = current;
         }
     },
 
     state: {
         users: [],
-        currentUser: {},
+        current: {},
     },
 
     getters: {
         allUsers(state) {
             return state.users
         },
-        currentUser(state){
-            return state.currentUser
+        currentUser(state) {
+            return state.current
         }
     }
 }

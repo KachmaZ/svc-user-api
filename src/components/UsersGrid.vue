@@ -12,10 +12,10 @@ import { mapGetters, mapActions } from "vuex";
 
 export default {
   computed: mapGetters(["allUsers"]),
-  methods: mapActions(["fetchUsers"]),
+  methods: mapActions(["fetchAll"]),
 
   async mounted() {
-    this.fetchUsers();
+    this.fetchAll();
   },
 
   components: {

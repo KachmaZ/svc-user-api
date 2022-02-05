@@ -1,8 +1,12 @@
 <template>
-<div class="col-lg-4 col-md-6 col-xs-10">
-  <div class="card">
-      <img class="card-img-top" src="@/assets/user-icon.png" alt="Card image cap">
-      <div class="card-body">
+  <div class="col-lg-4 col-md-6 col-xs-10">
+    <div class="card">
+      <img
+        class="card-img-top"
+        src="@/assets/user-icon.png"
+        alt="Card image cap"
+      />
+      <div class="card-body mx-4">
         <h4 class="card-title" :title="user.name">
           {{ user.username }}
         </h4>
@@ -10,18 +14,12 @@
         <div class="card-text">
           <div>Email: {{ user.email }}</div>
         </div>
-        <div class="btn-wrapper m-1">
-          <router-link
-          class="btn btn-primary"
-          :to="userLink"
-          >Go somewhere</router-link>
-        </div>
-        
+      </div>
+      <div class="btn-wrapper m-4">
+        <router-link class="btn btn-primary" :to="userLink">More details</router-link>
       </div>
     </div>
-
-</div>
-  
+  </div>
 </template>
 
 <script>
@@ -41,9 +39,9 @@ export default {
       let fullName = this.user.name.split(" ");
       return `${fullName[0][0]}. ${fullName[1]}`;
     },
-    siteAddress(){
-      return `http://${this.user.website}`
-    }
+    siteAddress() {
+      return `http://${this.user.website}`;
+    },
   },
 };
 </script>
