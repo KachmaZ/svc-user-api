@@ -35,7 +35,7 @@ export default {
   computed: {
     ...mapActions(["fetchById"]),
     userLink() {
-      return `/user/${this.user.id}`;
+      return `/svc-user-api/user/${this.user.id}`;
     },
     shortName() {
       let fullName = this.user.name.split(" ");

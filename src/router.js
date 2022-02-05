@@ -12,13 +12,13 @@ export default new Router({
 
         // Main page
         {
-            path: "/",
+            path: "/svc-user-api",
             component: Home
         },
 
         // Single user's page
         {
-            path: "/user/:userId",
+            path: "/svc-user-api/user/:userId",
             component: () => import("./views/Profile.vue"), //Lasy render.
         }
     ]

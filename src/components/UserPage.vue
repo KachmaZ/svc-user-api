@@ -9,7 +9,7 @@
       <CompanyInfo :company="currentUser.company" />
     </div>
     <div class="btn-wrapper m-4 d-flex justify-content-center">
-      <router-link class="btn btn-primary" to="/">To main</router-link>
+      <router-link class="btn btn-primary" to="/svc-user-api">To main</router-link>
     </div>    
   </div>
 </template>
